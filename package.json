@@ -1,0 +1,35 @@
+{
+  "name": "ndtech-node",
+  "version": "0.0.1",
+  "description": "base node service for ndtech",
+  "main": "app.js",
+  "scripts": {
+    "start": "SET APP_ENVIRONMENT=prod&& nodemon --watch src --ignore src/**/**.spec.* src/app.ts",
+    "compile": "tsc -p ./src/",
+    "test": "mocha src/**/**.spec.js",
+    "update-22ndtech-common-lib": "npm install --save 22ndtech-common-lib@latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "22ndtech-common-lib": "0.0.17",
+    "@types/node": "^14.14.11",
+    "aws-sdk": "^2.807.0",
+    "bunyan": "^1.8.14",
+    "express": "^4.17.1",
+    "glob": "^7.1.6",
+    "lodash": "^4.17.20",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.11.6",
+    "mongoose-unique-validator": "^2.0.3",
+    "nodemailer": "^6.4.16",
+    "passport-local": "^1.0.0",
+    "passport-restify": "^1.0.1",
+    "restify": "^8.5.1",
+    "restify-cookies": "^0.2.6"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.2.0"
+  }
+}
